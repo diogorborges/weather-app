@@ -1,21 +1,24 @@
 plugins {
-    id(GradlePluginId.ANDROID_APPLICATION)
-    id(GradlePluginId.KOTLIN_ANDROID_EXTENSIONS)
+    id(GradlePluginId.ANDROID_LIBRARY)
     kotlin("android")
 }
 
 android {
     compileSdkVersion(AndroidConfig.COMPILE_SDK_VERSION)
-    buildToolsVersion(AndroidConfig.BUILD_TOOLS_VERSION)
 
     defaultConfig {
-        applicationId(AndroidConfig.ID)
         minSdkVersion(AndroidConfig.MIN_SDK_VERSION)
         targetSdkVersion(AndroidConfig.TARGET_SDK_VERSION)
         versionCode(AndroidConfig.VERSION_CODE)
         versionName(AndroidConfig.VERSION_NAME)
 
         testInstrumentationRunner(AndroidConfig.TEST_INSTRUMENTATION_RUNNER)
+
+        buildConfigField(
+            "String",
+            "BASE_API_URL",
+            "\"https://cdn.faire.com/static/mobile-take-home/\""
+        )
     }
 
     buildTypes {
@@ -36,25 +39,19 @@ android {
             jvmTarget = "1.8"
         }
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    api(project(ModuleDependency.LIBRARY_RESOURCES))
-    api(project(ModuleDependency.LIBRARY_CORE))
+    api(LibraryDependency.kodein)
+    api(LibraryDependency.kodeinFramework)
+    api(LibraryDependency.gson)
 
-    implementation(LibraryDependency.recyclerView)
-    implementation(LibraryDependency.constrainLayout)
-
-    implementation(LibraryDependency.navigationFragment)
-    implementation(LibraryDependency.navigationUi)
-
-    testImplementation(TestDependency.jUnit)
-    testImplementation(TestDependency.kluent)
-    androidTestImplementation(TestDependency.kluentAndroid)
-    testImplementation(TestDependency.mockk)
-    testImplementation(TestDependency.coroutines)
-    testImplementation(TestDependency.arch)
+    implementation(LibraryDependency.okHttp)
+    implementation(LibraryDependency.loggingInterceptor)
+    implementation(LibraryDependency.coroutinesAndroid)
+    implementation(LibraryDependency.coroutinesCore)
+    api(LibraryDependency.retrofit)
+    implementation(LibraryDependency.retrofitAdapters)
+    implementation(LibraryDependency.retrofitGsonConverter)
+    implementation(LibraryDependency.kotlin)
 }

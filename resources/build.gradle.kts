@@ -1,15 +1,13 @@
 plugins {
-    id(GradlePluginId.ANDROID_APPLICATION)
+    id(GradlePluginId.ANDROID_LIBRARY)
     id(GradlePluginId.KOTLIN_ANDROID_EXTENSIONS)
     kotlin("android")
 }
 
 android {
     compileSdkVersion(AndroidConfig.COMPILE_SDK_VERSION)
-    buildToolsVersion(AndroidConfig.BUILD_TOOLS_VERSION)
 
     defaultConfig {
-        applicationId(AndroidConfig.ID)
         minSdkVersion(AndroidConfig.MIN_SDK_VERSION)
         targetSdkVersion(AndroidConfig.TARGET_SDK_VERSION)
         versionCode(AndroidConfig.VERSION_CODE)
@@ -36,25 +34,16 @@ android {
             jvmTarget = "1.8"
         }
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    api(project(ModuleDependency.LIBRARY_RESOURCES))
-    api(project(ModuleDependency.LIBRARY_CORE))
-
-    implementation(LibraryDependency.recyclerView)
-    implementation(LibraryDependency.constrainLayout)
-
-    implementation(LibraryDependency.navigationFragment)
-    implementation(LibraryDependency.navigationUi)
-
-    testImplementation(TestDependency.jUnit)
-    testImplementation(TestDependency.kluent)
-    androidTestImplementation(TestDependency.kluentAndroid)
-    testImplementation(TestDependency.mockk)
-    testImplementation(TestDependency.coroutines)
-    testImplementation(TestDependency.arch)
+    api(LibraryDependency.kodein)
+    api(LibraryDependency.kodeinFramework)
+    api(LibraryDependency.appCompat)
+    api(LibraryDependency.fragmentKtx)
+    api(LibraryDependency.kotlin)
+    api(LibraryDependency.coreKtx)
+    api(LibraryDependency.material)
+    api(LibraryDependency.lifeCycleLiveData)
+    api(LibraryDependency.lifeCycleViewModel)
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather-App</string>
+    <string name="error_message">Unfortunately the weather conditions are bad and brought our servers down. Our team is in a raincoat trying to solve the problem, please try again later :(</string>
+    <string name="empty_message">Ohh its very cold today, looks like the data is frozen and we have nothing to display around here! Please try again when the weather warms up :D</string>
+</resources>

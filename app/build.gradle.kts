@@ -38,18 +38,13 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
     api(project(ModuleDependency.LIBRARY_RESOURCES))
     api(project(ModuleDependency.LIBRARY_CORE))
-
-    implementation(LibraryDependency.recyclerView)
-    implementation(LibraryDependency.constrainLayout)
-
-    implementation(LibraryDependency.navigationFragment)
-    implementation(LibraryDependency.navigationUi)
 
     testImplementation(TestDependency.jUnit)
     testImplementation(TestDependency.kluent)

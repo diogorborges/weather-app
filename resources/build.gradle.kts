@@ -34,16 +34,24 @@ android {
             jvmTarget = "1.8"
         }
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
     api(LibraryDependency.kodein)
     api(LibraryDependency.kodeinFramework)
     api(LibraryDependency.appCompat)
-    api(LibraryDependency.fragmentKtx)
     api(LibraryDependency.kotlin)
     api(LibraryDependency.coreKtx)
     api(LibraryDependency.material)
     api(LibraryDependency.lifeCycleLiveData)
     api(LibraryDependency.lifeCycleViewModel)
+    api(LibraryDependency.fragmentKtx)
+    api(LibraryDependency.navigationUi)
+    api(LibraryDependency.navigationFragment)
+    api(LibraryDependency.recyclerView)
+    api(LibraryDependency.constrainLayout)
 }

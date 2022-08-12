@@ -1,6 +1,7 @@
 package com.diogo.core.model
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class ConsolidatedWeather(
     val id: Long,
@@ -15,5 +16,5 @@ data class ConsolidatedWeather(
     @SerializedName("the_temp")
     val theTemp: Double,
     @SerializedName("applicable_date")
-    val date: String
+    val date: Date
 )

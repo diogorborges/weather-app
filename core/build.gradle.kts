@@ -50,7 +50,7 @@ dependencies {
     implementation(LibraryDependency.loggingInterceptor)
     implementation(LibraryDependency.coroutinesAndroid)
     implementation(LibraryDependency.coroutinesCore)
-    api(LibraryDependency.retrofit)
+    implementation(LibraryDependency.retrofit)
     implementation(LibraryDependency.retrofitAdapters)
     implementation(LibraryDependency.retrofitGsonConverter)
     implementation(LibraryDependency.kotlin)

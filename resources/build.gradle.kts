@@ -52,6 +52,5 @@ dependencies {
     api(LibraryDependency.fragmentKtx)
     api(LibraryDependency.navigationUi)
     api(LibraryDependency.navigationFragment)
-    api(LibraryDependency.recyclerView)
     api(LibraryDependency.constrainLayout)
 }

@@ -14,7 +14,7 @@ class HomeViewModel(
     private val _homeUiState = MutableStateFlow<HomeUIState>(HomeUIState.Loading)
     val homeUiState: StateFlow<HomeUIState> = _homeUiState
 
-    init {
+    fun loadWeather() {
         viewModelScope.launch {
             _homeUiState.value = HomeUIState.Loading
             when (val response = weatherUseCase.execute(LOCATION_ID)) {
@@ -26,7 +26,7 @@ class HomeViewModel(
                     }
                 }
                 is WeatherUseCase.Response.Error -> {
-                    _homeUiState.value = HomeUIState.Error(response.message)
+                    _homeUiState.value = HomeUIState.Error
                 }
             }
         }

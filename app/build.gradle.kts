@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id(GradlePluginId.ANDROID_APPLICATION)
     id(GradlePluginId.KOTLIN_ANDROID_EXTENSIONS)
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -46,9 +49,10 @@ dependencies {
     api(project(ModuleDependency.LIBRARY_RESOURCES))
     api(project(ModuleDependency.LIBRARY_CORE))
 
+    implementation(LibraryDependency.glide)
+    kapt(LibraryDependency.glideCompiler)
+
     testImplementation(TestDependency.jUnit)
-    testImplementation(TestDependency.kluent)
-    androidTestImplementation(TestDependency.kluentAndroid)
     testImplementation(TestDependency.mockk)
     testImplementation(TestDependency.coroutines)
     testImplementation(TestDependency.arch)

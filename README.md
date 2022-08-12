@@ -39,13 +39,13 @@ Java 11 is required for Gradle plugin.
 
 ## 3rd party libraries or copied code you may have used
 
-Retrofit + Okhttp + Coroutines for network
-Kodein for DI
-Navigation for fragment's management
-ViewModel + Livedata for architecture
-Glide for image
-AppCompat + Material for UI
-Mockk + Coroutines + jUnit for testing
+- Retrofit + Okhttp + Coroutines for network
+- Kodein for DI
+- Navigation for fragment's management
+- ViewModel + Livedata for architecture
+- Glide for image
+- AppCompat + Material for UI
+- Mockk + Coroutines + jUnit for testing
 
 ## Any other information that you would like us to know.
 

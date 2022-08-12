@@ -6,25 +6,25 @@ I previously divided the work into 4 parts, knowing that I wouldn't be able to d
 
 Part 1 - Init project + buildSrc + Kotlin DSL + Gradle KTS (better dependency management) (45 min)
 
-1 - new project -> fragment w/ viewModel
-2 - new directory -> buildSrc
-3 - buildSrc -> new empty file called `build.gradle.kts` w/ `kotlin-dsl` plugin
-4 - convert Gradle files to kts
-5 - add dependencies
+- new project -> fragment w/ viewModel
+- new directory -> buildSrc
+- buildSrc -> new empty file called `build.gradle.kts` w/ `kotlin-dsl` plugin
+- convert Gradle files to kts
+- add dependencies
 
 Part 2 - Create modules (split responsibilities) + Cleanup modules (45 min)
 
-1 - new module -> library -> resources 
-2 - new module -> library -> core
-3 - manage dependencies around the modules
-4 - start DI 
+- new module -> library -> resources 
+- new module -> library -> core
+- manage dependencies around the modules
+- start DI 
 
 Part 3 - Development (2h00)
 
-1 - MVVM
-2 - Finish DI
-3 - Fetch data
-4 - UI
+- MVVM
+- Finish DI
+- Fetch data
+- UI
 
 Part 4 - Tests + Cleanup (30 min)
 

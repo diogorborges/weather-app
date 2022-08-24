@@ -42,7 +42,7 @@ Java 11 is required for Gradle plugin.
 - Retrofit + Okhttp + Coroutines for network
 - Kodein for DI
 - Navigation for fragment's management
-- ViewModel + Livedata for architecture
+- ViewModel + StateFlow for architecture
 - Glide for image
 - AppCompat + Material for UI
 - Mockk + Coroutines + jUnit for testing
